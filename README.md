@@ -45,7 +45,7 @@ import cv2
                 cv2.imwrite(os.path.join(result_path, name[0]), mask_np)
 
 
-
+```md
 ![image](https://github.com/zlxokok/mtgt.github.io/blob/main/bjorke_9_img.png)
 ![image](https://github.com/zlxokok/mtgt.github.io/blob/main/bjorke_9.png)
 
