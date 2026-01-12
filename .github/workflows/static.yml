@@ -1,0 +1,57 @@
+---
+title: "MTGT 多模态医学图像分割"
+excerpt: "Matplotlib & Seaborn 数据分析与模型评估"
+collection: portfolio
+date: 2026-1-12
+---
+
+## 核心实现
+
+### 1. 分割结果析可视化
+
+使用 numpy 进行矩阵计算得出指标，通过 OpenCV 渲染二值图并输出：
+
+```python
+import torch
+import numpy as np
+import SimpleITK as sitk
+import cv2
+
+        for batch_idx, (sampled_batch, name) in enumerate(valloader):
+            number += 1
+            images, masks, text = sampled_batch['image'], sampled_batch['label'], sampled_batch['text']
+            sys.stdout.write('\r%d/%s' % (number, len(valloader)))
+            batch_idx += 1
+            images, masks_cuda, text = images.cuda(), masks.cuda(), text.cuda()
+
+            images = images.float()
+            masks_pred = model(images, text)
+
+            predicted = masks_pred.argmax(1)
+            train_mdice += Miou.calculate_mdice(predicted, masks_cuda, 2).item()
+            train_miou += Miou.calculate_miou(predicted, masks_cuda, 2).item()
+            train_jaccard += Miou.jaccard(predicted, masks_cuda).item()
+            train_accuracy += Miou.accuracy(predicted, masks_cuda).item()
+            train_dice += Miou.dice(predicted, masks_cuda).item()
+            train_recall += Miou.recall(predicted, masks_cuda).item()
+            train_SP += Miou.SP(predicted, masks_cuda).item()
+            train_precision += Miou.precision(predicted, masks_cuda).item()
+            train_f1 += Miou.F1score(predicted, masks_cuda).item()
+            if imwrite_image:
+                predict = predicted.squeeze(0)
+                mask_np = predict.cpu().numpy()  # np.array
+                mask_np = (mask_np * 255).astype('uint8')
+                mask_np[mask_np > 0] = 255
+                cv2.imwrite(os.path.join(result_path, name[0]), mask_np)
+
+
+
+
+
+
+
+
+
+
+
+
