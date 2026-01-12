@@ -25,7 +25,7 @@ date: 2026-01-12
 ## 🧠 模型框架
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/zlxokok/mtgt.github.io/main/bjorke_9_img.png" width="700">
+  <img src="https://raw.githubusercontent.com/zlxokok/mtgt.github.io/main/1.png" width="700">
 </p>
 
 > **图 1**：MTGT 多模态医学图像分割整体框架示意图
@@ -34,7 +34,7 @@ date: 2026-01-12
 
 ## ⚙️ 核心实现
 
-### 1. 分割结果指标计算与可视化
+### 1. 分割结果指标计算
 
 在验证阶段，模型输出的预测结果用于计算多种分割评价指标，并将预测掩膜保存为二值图像进行可视化分析。
 
@@ -67,3 +67,19 @@ for batch_idx, (sampled_batch, name) in enumerate(valloader):
     mask_np = (predict * 255).astype('uint8')
     mask_np[mask_np > 0] = 255
     cv2.imwrite(os.path.join(result_path, name[0]), mask_np)
+
+### 2. 分割结果可视化
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/zlxokok/mtgt.github.io/main/bjorke_9_img.png" width="700">
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/zlxokok/mtgt.github.io/main/bjorke_9.png" width="700">
+</p>
+
+
+
+
+
+
+    
