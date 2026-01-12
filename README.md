@@ -67,7 +67,7 @@ for batch_idx, (sampled_batch, name) in enumerate(valloader):
     mask_np = (predict * 255).astype('uint8')
     mask_np[mask_np > 0] = 255
     cv2.imwrite(os.path.join(result_path, name[0]), mask_np)
-
+```
 ### 2. 分割结果可视化
 
 <p align="center">
