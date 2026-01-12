@@ -71,15 +71,11 @@ for batch_idx, (sampled_batch, name) in enumerate(valloader):
 ### 2. 分割结果可视化
 
 <p align="center">
-  <figure style="display:inline-block; width:45%; text-align:center;">
-    <img src="https://raw.githubusercontent.com/zlxokok/mtgt.github.io/main/bjorke_9_img.png" width="100%">
-    <figcaption><em>(a) 原始医学图像</em></figcaption>
-  </figure>
-
-  <figure style="display:inline-block; width:45%; text-align:center;">
-    <img src="https://raw.githubusercontent.com/zlxokok/mtgt.github.io/main/bjorke_9.png" width="100%">
-    <figcaption><em>(b) MTGT 分割预测结果</em></figcaption>
-  </figure>
+  <img src="https://raw.githubusercontent.com/zlxokok/mtgt.github.io/main/bjorke_9_img.png" width="45%">
+  <img src="https://raw.githubusercontent.com/zlxokok/mtgt.github.io/main/bjorke_9.png" width="45%">
+</p>
+<p align="center">
+  <em>左：输入图像  右：模型预测结果</em>
 </p>
 
 
