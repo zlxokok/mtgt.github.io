@@ -1,6 +1,6 @@
 ---
 title: "MTGT 多模态医学图像分割"
-excerpt: "Matplotlib & Seaborn 数据分析与模型评估"
+excerpt: "数据分析与模型评估"
 collection: portfolio
 date: 2026-1-12
 ---
