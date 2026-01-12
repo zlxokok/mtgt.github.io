@@ -71,10 +71,8 @@ for batch_idx, (sampled_batch, name) in enumerate(valloader):
 ### 2. 分割结果可视化
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/zlxokok/mtgt.github.io/main/bjorke_9_img.png" width="700">
-</p>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/zlxokok/mtgt.github.io/main/bjorke_9.png" width="700">
+  <img src="https://raw.githubusercontent.com/zlxokok/mtgt.github.io/main/bjorke_9_img.png" width="45%">
+  <img src="https://raw.githubusercontent.com/zlxokok/mtgt.github.io/main/bjorke_9.png" width="45%">
 </p>
 
 
